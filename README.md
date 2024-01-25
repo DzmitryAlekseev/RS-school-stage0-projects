@@ -1,1 +1,1 @@
-# js30-1.2-audio-player
+# js30-2.2-image-galery
