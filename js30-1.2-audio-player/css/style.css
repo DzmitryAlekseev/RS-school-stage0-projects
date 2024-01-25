@@ -1,0 +1,303 @@
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+.container {
+    margin: 0 auto;
+    height: 100vh;
+    position: relative;
+   
+}
+
+.container .container__image {
+   
+    display: flex;
+    margin: 0 auto;
+    height: inherit;
+}
+
+.container .container__image img{
+    width: 100%;
+    object-fit: contain;
+    filter: blur(10px);
+}
+
+.container .container__player {
+    position: fixed;
+    width: 30%;
+    height: max-content;
+    top: 20%;
+    left: 35%;
+    z-index: 1;
+    background-color: #adadad;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 1px black;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .container__player .player__image {
+    width: 100%;
+    height: 70%;
+}
+
+.container .container__player .player__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.container .container__player .player__controls {
+    background: rgb(204,204,204);
+    background: linear-gradient(202deg, rgba(204,204,204,1) 46%, rgba(60,60,60,0.9752275910364145) 100%);
+    height: 100%;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.container .container__player .player__controls .controls__track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.container .container__player .player__controls .controls__track .track__play {
+    background-image: url('../img/play.svg');
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.container .container__player .player__controls .controls__track .track__play:hover{
+    box-shadow: 0px 0px 15px 1px rgb(81, 81, 81);
+    cursor: pointer;
+}
+
+.container .container__player .player__controls .controls__track .track__infornation {
+    font-family: 'Red Hat Display', sans-serif;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.container .container__player .player__controls .controls__track .track__infornation .track__author  {
+    font-size: 22px;
+    font-weight: 800;
+    color: #c8ff00;
+    margin: 0;
+}
+
+.container .container__player .player__controls .controls__track .track__infornation .track__name  {
+    font-size: 18px;
+    margin: 0;
+}
+
+
+.container .container__player .player__controls .controls__track .track__leaf-through {
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    justify-content: space-between;
+}
+
+.container .container__player .player__controls .controls__track .track__leaf-through .track__next {
+    background-image: url('../img/next-track.svg');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.container .container__player .player__controls .controls__track .track__leaf-through .track__next:hover {
+    box-shadow: 0px 0px 15px 1px rgb(137, 137, 137);
+    cursor: pointer;
+}
+
+.container .container__player .player__controls .controls__track .track__leaf-through .track__last {
+    background-image: url('../img/last-track.svg');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.container .container__player .player__controls .controls__track .track__leaf-through .track__last:hover {
+    box-shadow: 0px 0px 15px 1px rgb(137, 137, 137);
+    cursor: pointer;
+}
+
+.container .container__player .player__controls .audio__time {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    height: 30px;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.container .container__player .player__controls .audio__time  p {
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 15px;
+    margin: 0;
+    width: 50px;
+}
+
+.container .container__player .player__controls .track__progress-area {
+    width: 80%;
+    height: fit-content;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.container .container__player .player__controls .track__progress-area progress:hover{
+    cursor:pointer;
+}
+
+
+
+
+
+.track__progress-area .progress-area__bar {
+    height: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+.track__progress-area .progress-area__bar {
+    background: rgb(128,128,128);
+    background: linear-gradient(0deg, rgba(128,128,128,1) 0%, rgba(0,0,0,1) 100%);
+  }
+  progress::-webkit-progress-bar {
+    background: rgb(128,128,128);
+    background: linear-gradient(0deg, rgba(128,128,128,1) 0%, rgba(0,0,0,1) 100%);
+
+  }
+  progress::-webkit-progress-value {
+    background: rgb(228,228,228);
+    background: linear-gradient(180deg, rgba(228,228,228,1) 11%, rgba(144,144,144,1) 56%, rgba(105,105,105,1) 84%);
+  }
+  progress::-moz-progress-bar {
+    background: rgb(128,128,128);
+    background: linear-gradient(0deg, rgba(128,128,128,1) 0%, rgba(0,0,0,1) 100%);
+  }
+
+
+.track__progress-area .progress-area__point {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    border-radius: 20px;
+    left: 0;
+    background: rgb(155,191,71);
+background: linear-gradient(90deg, rgba(155,191,71,1) 6%, rgba(203,254,87,1) 40%, rgba(235,255,158,1) 50%, rgba(203,254,87,1) 60%, rgba(155,191,71,1) 94%);
+    z-index: 1;
+    transform: translate(-5px, 0); 
+}
+
+footer {
+    width: inherit;
+    height: 55px;
+    background-color: #454545;
+    border-radius: 0 0 10px 10px;
+   
+}
+
+footer .logo__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .logo {
+    background-image: url('https://rs.school/images/rs_school_js.svg');
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 40px; 
+}
+
+footer .logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.git {
+    list-style-type: none;
+    padding: 0;
+}
+
+.git__logo {
+    background-image: url(../img/logo\ git.svg);
+    background-repeat: no-repeat;
+    padding: 0;
+    padding-left: 25px;
+}
+
+.git__logo a {
+    color:aliceblue;
+    text-decoration: none;
+}
+
+footer p {
+    height: fit-content;
+    margin: 0;
+    color:aliceblue;
+}
+
+@media(max-width: 1024px) {
+    .container .container__player {
+        width: 50%;
+        left: 25%;
+        top: 10%;
+    }
+}
+
+@media(max-width: 768px) {
+    .container .container__player {
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+    }
+
+    .container .container__player .player__image {
+        height: fit-content;
+    }
+
+    .container .container__player .player__image img{
+        object-fit: contain;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

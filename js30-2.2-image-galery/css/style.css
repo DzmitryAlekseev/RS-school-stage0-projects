@@ -1,0 +1,250 @@
+
+
+@media(max-width: 1920px){
+    body {
+        margin: 0;
+        font-family: 'Red Hat Display', sans-serif;
+        font-family: 'Comfortaa', cursive;
+    }
+
+    header {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+    }
+
+    .container {
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container .container__logo{
+       display: flex;
+       flex-direction: row;
+       gap: 10px
+    }
+
+    .container .container__logo p{
+        margin: 0;
+        font-size: 40px;
+     }
+
+    .container .container__search {
+        height: fit-content;
+        border-radius: 20px;
+        height: 40px;
+        position: relative;
+       
+    }
+
+    input[type="search"]::-webkit-search-cancel-button{
+      -webkit-appearance:none;
+    }
+
+    .container .container__search input{
+        height: 100%;
+        width: 350px;
+        border: 0.5px solid rgb(199, 199, 199);
+        box-shadow: none;
+        border-radius: 20px;
+        font-size: 20px;
+        font-family: 'Red Hat Display', sans-serif;
+        font-family: 'Comfortaa', cursive;
+        padding: 0 10px;
+    }
+
+    .container .container__search input:hover{
+       cursor: text;
+      
+    }
+
+    .container .container__search input:focus-visible{
+        cursor: text;
+        outline: none;
+        transition: 0.4s;
+        box-shadow: 0 0 2px 2px rgb(252, 216, 98);
+     }
+
+    .container .container__search .search__image {
+        position: absolute;
+        top: 25%;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        background-image: url('https://rolling-scopes-school.github.io/dzmitryalekseev-JSFEPRESCHOOL2023Q2/js30-2.2-image-galery/img/search.svg');
+        background-repeat: no-repeat;
+        
+    }
+
+
+
+    .container .container__search .search__image:hover {
+        transition: 0.1s;
+        filter: brightness(1) sepia(20) hue-rotate(12deg) saturate(70);
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    hr {
+        border: none;
+        background-color: #FFB320;
+        height: 10px;
+        margin: 0;
+    }
+
+    main {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .image__container {
+        
+       
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+       
+    }
+
+    .image__container img {
+        width: 380px;
+        height: 220px;
+        margin: 5px;
+        object-fit: conatin;
+    }
+
+    .image__container img:hover {
+       cursor: pointer;
+    }
+
+    footer {
+        width: inherit;
+        height: 55px;
+        background-color: #FFB320;
+        border-radius: 0 0 10px 10px;
+       
+    }
+    
+    footer .logo__container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    footer .logo {
+        background-image: url('https://rs.school/images/rs_school_js.svg');
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 40px; 
+    }
+    
+    footer .logo a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .git {
+        list-style-type: none;
+        padding: 0;
+        width: 300px;
+    }
+    
+    .git__logo {
+        padding: 0;
+        padding-left: 25px;
+    }
+    
+    .git__logo a {
+        color:rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 20px;
+        width: 100%;
+        height: 100%;
+        text-align: right;
+        display: block;
+    }
+    
+    footer p {
+        height: fit-content;
+        margin: 0;
+        color:rgb(255, 255, 255);
+        font-size: 20px;
+    }
+    
+}
+
+@media(max-width: 1169px){
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .image__container {
+        justify-content: center;
+    }
+
+    footer .logo__container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+@media(max-width: 786px){
+    header {
+        height: fit-content;
+    }
+    .container {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px;
+    }
+    main {
+        width: 100%;
+    }
+    .image__container img {
+        width: 100%;
+        height: fit-content;
+        margin: 10px;
+    }
+
+    footer {
+        height: fit-content;
+      
+    }
+
+    footer .logo {
+        width: 100px;
+        margin-top: 10px;
+    }
+
+    .git {
+        width: 100%;
+        height: fit-content;
+        
+    }
+
+    .git__logo {
+        padding: 0;
+        height: fit-content;
+    }
+
+    .git__logo a {
+        text-align: center;
+       
+    }
+
+    footer .logo__container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../js30-1.2-audio-player/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;600&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__image">
+            <img src="../js30-1.2-audio-player/img/image1.png" alt="image1">
+        </div>
+
+        <div class="container__player">
+            <div class="player__image">
+                <img src="../js30-1.2-audio-player/img/image1.png" alt="image1">
+            </div>
+
+            <div class="player__controls">
+                <div class="controls__track">
+                    <div class="track__play" onclick='playTrack(trackAudio)' id="play">
+                     
+                    </div>
+
+                   <div class="track__infornation">
+                        <div class="track__author">
+                            The Music Travels
+                        </div>
+
+                        <div class="track__name">
+                            Flowers
+                        </div>
+                   </div>
+
+                   <div class="track__leaf-through">
+                        <div class="track__next" onclick="nextTrack()"></div>
+                        <div class="track__last" onclick="lastTrack()"></div>
+                   </div>
+                </div>
+
+                <audio src="../js30-1.2-audio-player/audio/Music Travel Love - Flowers.mp3" id="myAudio" preload="metadata">
+                </audio>
+            
+                <div class="audio__time">
+                    <p class="last-time">00 : 00</p>
+                    <p class="lost-time">00 : 00</p>
+                </div>
+
+                <div class="track__progress-area" onmousedown="showCoords(event)">
+                    <progress min="1" max="100" value="0" class="progress-area__bar" onclick="AreaPoint()" ></progress>
+                   
+                    <div class="progress-area__point" >
+                       
+                    </div>
+                    
+                </div>
+                <footer>
+                    <div class="logo__container">
+                        <div class="logo">
+                            <a href="https://rs.school/js/"> </a>
+                          
+                        </div>
+            
+                        <p>2023</p>
+            
+                        <ul class="git">
+                            <li class="git__logo"><a href="https://github.com/DzmitryAlekseev">Dzmitry Alekseev</a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>  
+        </div>
+    </div>
+    
+</body>
+<script src="../js30-1.2-audio-player/js/index.js"></script>
+</html>
